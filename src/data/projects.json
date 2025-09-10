@@ -1,0 +1,32 @@
+[
+  {
+    "title": "BOOKI",
+    "image": "/src/assets/booki1.png",
+    "hoverImage": "/src/assets/booki2.png",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "githubLink": "https://github.com/hschbonus/OCP2"
+  },
+  {
+    "title": "KASA",
+    "image": "/src/assets/kasa1.png",
+    "hoverImage": "/src/assets/kasa2.png",
+    "stack": ["React", "Sass"],
+    "githubLink": "https://github.com/hschbonus/OCP5"
+  },
+  {
+    "title": "SOPHIE BUEL",
+    "image": "/src/assets/buel1.png",
+    "hoverImage": "/src/assets/buel3.png",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "githubLink": "https://github.com/hschbonus/OCP3"
+  },
+  {
+    "title": "MON VIEUX GRIMOIRE",
+    "image": "/src/assets/mvg1.png",
+    "hoverImage": "/src/assets/mvg2.png",
+    "githubLink": "https://github.com/hschbonus/OCP6"
+
+  }
+
+  
+]

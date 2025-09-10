@@ -15,10 +15,10 @@ export function ReliefTitle({
       style={wrapperStyle}
     >
       {/* shadow */}
-      <span className="pointer-events-none absolute inset-0 translate-x-[6px] translate-y-[6px] rounded-2xl border-3 border-black bg-transparent" />
+      <span className="pointer-events-none absolute inset-0 translate-x-[6px] translate-y-[6px] rounded-2xl border-2 border-black bg-transparent" />
 
       {/* carte principale */}
-      <div className="relative z-10 h-full w-full rounded-2xl border-3 border-black bg-white p-4 flex items-center justify-center text-center">
+      <div className="relative z-10 h-full w-full rounded-2xl border-2 border-black bg-white p-4 flex items-center justify-center text-center">
         {children}
       </div>
     </span>

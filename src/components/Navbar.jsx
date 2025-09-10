@@ -5,7 +5,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
   return (
-<nav className="fixed top-0 w-full z-40 bg-white border-t-3 border-b-3 border-black">
+<nav className="fixed top-0 w-full z-40 bg-white border-t-2 border-b-2 border-black">
   <div className="max-w-4xl mx-auto px-4">
     <div className="flex justify-between items-center h-16">
       <a href="#home" className="text-xl font-black text-black">

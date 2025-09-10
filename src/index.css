@@ -4,7 +4,7 @@ html,
 body {
   --main-font: 'Montserrat', sans-serif;
   --main-bg-color: #E5E5E5;
-  --main-text-color: black;
+  --main-text-color: #333333;
   --primary-color: #E35336;
   --secondary-color: #165B33;
   margin: 0;

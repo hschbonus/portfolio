@@ -1,10 +1,13 @@
+import { ReliefButton } from "./ReliefButton";
+import { ReliefButtonCollapse } from "./ReliefButtonCollapse";
+
 export const ReliefCard = ({
   img,
   hoverImg,
   title = "Relief card image",
   href,
-  width = 280,
-  height = 500,
+  width = 380,
+  height = 400,
   className = "",
 }) => {
   const CardWrapper = href ? "a" : "div";
@@ -17,41 +20,43 @@ export const ReliefCard = ({
   return (
     <CardWrapper
       {...(href ? { href } : {})}
-      className={`group relative inline-block cursor-pointer select-none ${className}`}
+      className={`relative inline-block cursor-pointer select-none ${className}`}
       style={wrapperStyle}
     >
       {/* shadow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 translate-x-[6px] translate-y-[6px] rounded-xl border-3 border-black bg-white"
+        className="bg-transparent pointer-events-none absolute inset-0 translate-x-[15px] translate-y-[15px] rounded-xl border-2 border-black"
       />
 
       {/* carte principale */}
-      <div className="relative z-10 h-full w-full rounded-xl border-3 border-black bg-white p-4 flex flex-col">
+      <div className="relative z-10 h-full w-full rounded-xl border-2 border-black bg-white p-4 flex flex-col">
         {/* cadre image */}
-        <div className="relative flex-1 w-full rounded-xl border-3 border-black overflow-hidden bg-gray-100">
+        <div className="group relative flex-1 w-full rounded-xl border-2 border-black overflow-hidden bg-white">
           {/* image par défaut */}
           <img
             src={img}
             alt={title}
-            className="absolute inset-0 h-full w-full object-cover rounded-xl transition-opacity duration-250 group-hover:opacity-0"
+            className="absolute inset-0 h-full w-full object-contain object-left-top transition-opacity duration-250 ease-linear opacity-100 group-hover:opacity-0"
             draggable={false}
           />
+
           {/* image hover */}
           {hoverImg && (
             <img
               src={hoverImg}
               alt={title}
-              className="absolute inset-0 h-full w-full object-cover rounded-xl transition-opacity duration-250 opacity-0 group-hover:opacity-100"
+              className="absolute inset-0 h-full w-full object-contain object-left-top transition-opacity duration-250 ease-linear opacity-0 group-hover:opacity-100"
               draggable={false}
             />
           )}
         </div>
 
-        {/* titre optionnel */}
+        {/* titre */}
         {title && (
-          <div className="mt-3 text-center">
-            <h3 className="text-sm font-semibold tracking-wide uppercase">{title}</h3>
+          <div className="flex justify-between pl-1 gap-8 mt-3 text-center">
+            <h3 className="text-md font-extrabold uppercase">{title}</h3>
+            <ReliefButtonCollapse />
           </div>
         )}
       </div>

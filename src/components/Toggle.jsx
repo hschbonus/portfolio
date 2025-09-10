@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function Toggle({ onLabel = "ON", offLabel = "OFF", width = 300 }) {
+export function Toggle({ onLabel = "ON", offLabel = "OFF", width = 250 }) {
   const [enabled, setEnabled] = useState(false);
 
   const styleVars = {
@@ -17,8 +17,9 @@ export function Toggle({ onLabel = "ON", offLabel = "OFF", width = 300 }) {
       className={`
         relative inline-flex h-11 w-[var(--toggle-w)] items-center justify-center
         rounded-full overflow-hidden transition-colors duration-300 ease-in-out
-        text-white font-semibold border-3 border-black
+        text-white font-semibold border-2 border-black
         ${enabled ? "bg-primary" : "bg-secondary"}
+        cursor-pointer select-none
       `}
     >
       <span className="relative z-10 text-sm">
