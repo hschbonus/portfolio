@@ -1,6 +1,3 @@
-import { ReliefButton } from "./ReliefButton";
-import { ReliefButtonCollapse } from "./ReliefButtonCollapse";
-
 export const ReliefCard = ({
   img,
   hoverImg,
@@ -9,6 +6,7 @@ export const ReliefCard = ({
   width = 380,
   height = 400,
   className = "",
+  onClick, // <-- AJOUT ICI
 }) => {
   const CardWrapper = href ? "a" : "div";
 
@@ -20,6 +18,7 @@ export const ReliefCard = ({
   return (
     <CardWrapper
       {...(href ? { href } : {})}
+      onClick={onClick} // <-- AJOUT ICI
       className={`relative inline-block cursor-pointer select-none ${className}`}
       style={wrapperStyle}
     >
@@ -56,7 +55,6 @@ export const ReliefCard = ({
         {title && (
           <div className="flex justify-between pl-1 gap-8 mt-3 text-center">
             <h3 className="text-md font-extrabold uppercase">{title}</h3>
-            <ReliefButtonCollapse />
           </div>
         )}
       </div>

@@ -1,6 +1,7 @@
 [
   {
     "title": "BOOKI",
+    "description": "A landing page for a travel booking service, created as part of the OpenClassrooms Front-End Developer course. This project showcases responsive design and user-friendly interface using HTML, CSS, and JavaScript.",
     "image": "/src/assets/booki1.png",
     "hoverImage": "/src/assets/booki2.png",
     "stack": ["HTML", "CSS", "JavaScript"],
@@ -8,6 +9,7 @@
   },
   {
     "title": "KASA",
+    "description": "A web application for managing rental properties, built with React and Sass. This project emphasizes component-based architecture and responsive design.",
     "image": "/src/assets/kasa1.png",
     "hoverImage": "/src/assets/kasa2.png",
     "stack": ["React", "Sass"],
@@ -15,6 +17,7 @@
   },
   {
     "title": "SOPHIE BUEL",
+    "description": "A personal portfolio website showcasing the work of Sophie Buel, built with HTML, CSS, and JavaScript.",
     "image": "/src/assets/buel1.png",
     "hoverImage": "/src/assets/buel3.png",
     "stack": ["HTML", "CSS", "JavaScript"],
@@ -22,8 +25,10 @@
   },
   {
     "title": "MON VIEUX GRIMOIRE",
+    "description": "A web application for managing a personal library of old grimoires, built with React and Node.js. This project focuses on user authentication and data management.",
     "image": "/src/assets/mvg1.png",
     "hoverImage": "/src/assets/mvg2.png",
+    "stack": ["Nodejs", "Express", "MongoDB"],
     "githubLink": "https://github.com/hschbonus/OCP6"
 
   }
