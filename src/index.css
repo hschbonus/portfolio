@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+html,
+body {
+  --main-font: 'Montserrat', sans-serif;
+  --main-bg-color: #E5E5E5;
+  --main-text-color: black;
+  --primary-color: #E35336;
+  --secondary-color: #165B33;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+@layer utilities {
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
