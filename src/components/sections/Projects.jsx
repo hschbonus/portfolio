@@ -69,7 +69,7 @@ export const Projects = () => {
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
-                className="w-3/5 max-h-auto object-contain rounded-lg border-2 border-black"
+                className="w-3/5 max-h-175 object-cover rounded-lg border-2 border-black"
                 draggable={false}
               />
             )}
@@ -77,7 +77,7 @@ export const Projects = () => {
             <div className="ml-6 flex flex-col gap-4 w-2/5">
 
               {/* titre */}
-              <h3 className="text-xl font-bold">{selectedProject.title}</h3>
+              <h3 className="text-3xl font-extrabold">{selectedProject.title}</h3>
 
               {/* description */}
               {selectedProject.description && (
