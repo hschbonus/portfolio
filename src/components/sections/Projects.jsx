@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { ReliefCard } from "../ReliefCard";
 import { ReliefTitle } from "../ReliefTitle";
-import projects from "../../data/projects.json";
+import { projects } from "../../data/projects";
 import Modal from "../Modal";
+
 
 import {
   SiHtml5,
