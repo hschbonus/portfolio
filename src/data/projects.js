@@ -24,39 +24,39 @@ import mvg4 from '../assets/mvg4.png'
 
 // --- Données projets ---
 export const projects = [
-  {
+{
     title: 'BOOKI',
-    description:
-      'A landing page for a travel booking service, created as part of the OpenClassrooms Front-End Developer course. This project showcases responsive design and user-friendly interface using HTML, CSS, and JavaScript.',
+    description: 'Intégration des maquettes Figma d’un site de réservation d’hébergements et d’activités en HTML5 / CSS3. L’objectif était de respecter fidèlement le design fourni (pixel-perfect) tout en assurant un affichage responsive sur desktop, tablette et mobile grâce aux media queries. La mise en page suit les standards du W3C et les bonnes pratiques d’accessibilité. Le projet a été versionné avec Git/GitHub pour assurer un suivi clair du développement.',
     image: booki1,
     hoverImage: booki2,
+    imagesCarrousel: [booki1, booki2, booki3],
     stack: ['HTML', 'CSS', 'JavaScript'],
     githubLink: 'https://github.com/hschbonus/OCP2',
   },
   {
     title: 'KASA',
-    description:
-      'A web application for managing rental properties, built with React and Sass. This project emphasizes component-based architecture and responsive design.',
+    description: 'Développement complet du front-end d’une application de location immobilière en React avec Vite. Mise en place d’un design responsive. Création des composants dynamiques (galerie avec navigation circulaire, menu déroulant animé avec Collapse, gestion des routes et erreurs 404 via React Router). Utilisation de Sass pour l’organisation des styles et implémentation d’animations CSS. Gestion des données depuis un fichier JSON simulant l’API et versionnement sur Git/GitHub.',
     image: kasa1,
     hoverImage: kasa2,
+    imagesCarrousel:[kasa1, kasa2, kasa3, kasa4],
     stack: ['React', 'Sass'],
     githubLink: 'https://github.com/hschbonus/OCP5',
   },
   {
     title: 'SOPHIE BUEL',
-    description:
-      'A personal portfolio website showcasing the work of Sophie Buel, built with HTML, CSS, and JavaScript.',
+    description: 'Développement du site portfolio d’une architecte d’intérieur avec un front dynamique en JavaScript connecté à un back-end Node.js existant. Mise en place d’une galerie dynamique alimentée par l’API (affichage, filtrage par catégories). Création d’une page de connexion sécurisée avec gestion de l’authentification et stockage du token. Développement d’une modale interactive pour l’ajout et la suppression de projets, avec mise à jour du DOM en temps réel sans rechargement de la page.',
     image: buel1,
     hoverImage: buel3,
+    imagesCarrousel: [buel1, buel2, buel3, buel4],
     stack: ['HTML', 'CSS', 'JavaScript'],
     githubLink: 'https://github.com/hschbonus/OCP3',
   },
   {
     title: 'MON VIEUX GRIMOIRE',
-    description:
-      'A web application for managing a personal library of old grimoires, built with React and Node.js. This project focuses on user authentication and data management.',
+    description: 'Développement du back-end complet d’un site de référencement et de notation de livres avec Node.js, Express et MongoDB. Mise en place d’un modèle de données Mongoose et d’un système d’authentification sécurisée avec tokens JWT et mot de passe chiffré. Implémentation des routes CRUD pour la gestion des livres et ajout de la notation par utilisateur avec calcul automatique de la moyenne. Intégration de Multer et Sharp pour la gestion et l’optimisation des images, en respectant les bonnes pratiques de performance et de Green Code.',
     image: mvg1,
     hoverImage: mvg2,
+    imagesCarrousel: [mvg1, mvg2, mvg3, mvg4],
     stack: ['Nodejs', 'Express', 'MongoDB'],
     githubLink: 'https://github.com/hschbonus/OCP6',
   },

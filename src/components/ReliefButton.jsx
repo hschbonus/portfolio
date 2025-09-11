@@ -22,7 +22,7 @@ export function ReliefButton({
         className="
           relative z-10 flex h-full w-full items-center justify-center
           rounded-xl border-2 border-black
-          text-black font-semibold
+          text-black font-semibold px-4
           transition-transform duration-200 ease-out
           hover:translate-x-[6px] hover:translate-y-[6px]
           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black
