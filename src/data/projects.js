@@ -53,7 +53,7 @@ export const projects = [
   },
   {
     title: 'MON VIEUX GRIMOIRE',
-    description: 'Développement du back-end complet d’un site de référencement et de notation de livres avec Node.js, Express et MongoDB. Mise en place d’un modèle de données Mongoose et d’un système d’authentification sécurisée avec tokens JWT et mot de passe chiffré. Implémentation des routes CRUD pour la gestion des livres et ajout de la notation par utilisateur avec calcul automatique de la moyenne. Intégration de Multer et Sharp pour la gestion et l’optimisation des images, en respectant les bonnes pratiques de performance et de Green Code.',
+    description: 'Développement du back-end complet d’un site de référencement et de notation de livres avec Node.js, Express et MongoDB. Mise en place d’un modèle de données Mongoose et d’un système d’authentification sécurisée (JWT + mots de passe chiffrés). Création des routes CRUD pour la gestion des livres et ajout de la notation par utilisateur avec calcul automatique de la moyenne.',
     image: mvg1,
     hoverImage: mvg2,
     imagesCarrousel: [mvg1, mvg2, mvg3, mvg4],

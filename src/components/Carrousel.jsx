@@ -50,11 +50,11 @@ return (
           draggable={false}
         />
       </div>
-    <div className="flex items-center justify-center gap-10 mt-4 hidden md:flex">
+    <div className="flex items-center justify-center gap-10 md:mt-4 ">
       <ReliefButtonSm
           type="button"
           onClick={() => go(-1)}
-          className="pointer-events-auto absolute left-2"
+          className="pointer-events-auto absolute left-2 !hidden md:flex"
           aria-label="Précédent"
         >
           ‹
@@ -75,7 +75,7 @@ return (
       <ReliefButtonSm
         type="button"
         onClick={() => go(+1)}
-        className="pointer-events-auto absolute right-3 z-10"
+        className="pointer-events-auto absolute right-3 z-10 !hidden md:flex"
         aria-label="Suivant"
       >
         ›
