@@ -42,7 +42,7 @@ return (
     aria-roledescription="carousel"
     aria-label="Images du projet"
   >
-      <div className="relative h-[360px] md:h-[750px] w-full flex items-center justify-center overflow-hidden rounded-lg border-2 border-black bg-white">
+      <div className="relative h-[40vh] md:h-[62vh] w-full flex items-center justify-center overflow-hidden rounded-lg border-2 border-black bg-white">
         <img
           src={images[i]}
           alt={alt || `Slide ${i + 1}`}
@@ -50,7 +50,7 @@ return (
           draggable={false}
         />
       </div>
-    <div className="flex items-center justify-center gap-10 mt-4">
+    <div className="flex items-center justify-center gap-10 mt-4 hidden md:flex">
       <ReliefButtonSm
           type="button"
           onClick={() => go(-1)}

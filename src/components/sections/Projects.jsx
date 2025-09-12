@@ -86,14 +86,19 @@ export const Projects = () => {
           })()}
           </div>
 
-          <div id="modal-infos" className="md:w-2/5 flex flex-col gap-2 md:gap-8">
+          <div id="modal-infos" className="md:w-2/5 flex flex-col gap-2 md:gap-8 mt-2 md:mt-0">
 
-            {/* titre */}
-            <h3 className="text-xl md:text-3xl font-extrabold text-[var(--main-text-color)]">{selectedProject.title}</h3>
+            <div className="flex gap-3 items-center">
+              {/* titre */}
+              <h3 className="text-lg md:text-3xl font-extrabold text-[var(--main-text-color)] ">{selectedProject.title}</h3>
+              <a 
+                href={selectedProject.githubLink}>
+                <FaGithub className="ml-2 inline-block md:hidden" /></a>
+            </div>
 
             {/* description */}
             {selectedProject.description && (
-              <p className="text-sm md:text-base text-[var(--main-text-color)]">{selectedProject.description}</p>
+              <p className="text-xs md:text-base text-[var(--main-text-color)]">{selectedProject.description}</p>
             )}
 
             {/* stack */}
@@ -106,14 +111,14 @@ export const Projects = () => {
                 />
 
                 {/* carte principale */}
-                <div className="relative z-10 rounded-lg border-2 border-black bg-white px-4 mr-6 py-3">
+                <div className="relative z-10 rounded-lg border-2 border-black bg-white px-4 mr-6 py-1 md:py-3">
                   <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-x-10 gap-y-4">
                     {selectedProject.stack.map((tech) => {
                       const Icon = techIcon[tech];
                       return (
                         <li key={tech} className="flex flex-col items-center text-center">
                           {Icon ? (
-                            <Icon className="text-2xl shrink-0" />
+                            <Icon className="text-sm md:text-2xl shrink-0" />
                           ) : (
                             <span className="text-sm font-semibold">•</span>
                           )}
@@ -131,7 +136,7 @@ export const Projects = () => {
             <ReliefButton 
               width='120'
               href={selectedProject.githubLink}
-              className="md:mt-0 mt-2 self-start"
+              className="md:mt-0 mt-2 self-start !hidden"
             >
               Voir le code <FaGithub className="ml-2 inline-block" />
             </ReliefButton>
