@@ -90,7 +90,7 @@ export const Projects = () => {
           <div id="colonne2" className="w-2/5 flex flex-col gap-8">
 
             {/* titre */}
-            <h3 className="text-3xl font-extrabold">{selectedProject.title}</h3>
+            <h3 className="text-3xl font-extrabold text-[var(--main-text-color)]">{selectedProject.title}</h3>
 
             {/* description */}
             {selectedProject.description && (

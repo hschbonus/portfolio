@@ -17,13 +17,13 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="max-w-4xl flex-col items-center justify-center relative mx-auto px-4 py-4"
+      className="max-w-4xl flex-col items-center justify-center relative mx-auto px-4 py-20"
     >
       <ReliefTitle>
         <h2 className="text-xl font-bold">QUI SUIS-JE ?</h2>
       </ReliefTitle>
 
-      <div className="rounded-xl p-12 border-white/10 border">
+      <div className="rounded-xl pt-10 border-white/10 border">
         <p className="text-xl text-[var(--main-text-color)] text-center">
           Passionné par le numérique, je conçois et développe des solutions web alliant créativité et efficacité. 
           J’accorde une attention particulière à l’expérience utilisateur et aux détails visuels, pour donner vie à des projets modernes et intuitifs. 

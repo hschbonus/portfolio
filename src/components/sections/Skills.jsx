@@ -1,43 +1,82 @@
+import { useState } from "react";
 import { ReliefTitle } from "../ReliefTitle";
 import { Toggle } from "../Toggle";
 
-export const Skills = () => {
-  const frontendSkills = [
-    "HTML",
-    "CSS",
-    "React",
-  ];
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiSass,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss
+} from "react-icons/si";
 
-  const backendSkills = [
-    "Node.js", 
-    "Express", 
-    "MongoDB", 
-  ];
+export const techIcon = {
+  HTML: SiHtml5,
+  CSS: SiCss3,
+  JavaScript: SiJavascript,
+  React: SiReact,
+  Sass: SiSass,
+  Nodejs: SiNodedotjs,
+  Express: SiExpress,
+  MongoDB: SiMongodb,
+  Tailwind: SiTailwindcss
+};
+
+export const Skills = () => {
+  const [showBackend, setShowBackend] = useState(false);
+  const [fade, setFade] = useState(true);
+
+  const frontendSkills = ["HTML", "CSS", "JavaScript", "Sass", "Tailwind", "React"];
+  const backendSkills = ["Nodejs", "Express", "MongoDB"];
+
+  const skills = showBackend ? backendSkills : frontendSkills;
+
+  const handleToggle = (value) => {
+    setFade(false); // démarre fade-out
+    setTimeout(() => {
+      setShowBackend(value);
+      setFade(true); // déclenche fade-in
+    }, 200); // durée du fade-out
+  };
 
   return (
     <section
-      id="about"
-      className="max-w-4xl h-[800px] flex-col items-center justify-center relative mx-auto px-4 py-4"
+      id="skills"
+      className="max-w-4xl flex flex-col gap-10 items-center justify-center relative mx-auto px-4 py-20"
     >
-      <ReliefTitle>
-        <h2 className="text-xl font-bold">QUI SUIS-JE ?</h2>
-      </ReliefTitle>
-
-        <div className="rounded-xl p-12 border-white/10 border">
-          <p className="text-xl text-gray-700 text-center">
-            Passionné par le numérique, je conçois et développe des solutions web alliant créativité et efficacité. 
-            J’accorde une attention particulière à l’expérience utilisateur et aux détails visuels, pour donner vie à des projets modernes et intuitifs. 
-            Plus qu’un simple développement, je propose un accompagnement personnalisé pour transformer vos idées en projets concrets et pérennes. 
-            Curieux et polyvalent, je cherche toujours à progresser et à relever de nouveaux défis. <br/>Bienvenue sur mon portfolio !
-          </p>
-        </div>
-
       <ReliefTitle className="mb-4 mt-8">
-        <h2 className="text-xl font-bold">MES COMPETENCES</h2>
+        <h2 className="text-xl font-bold">MES COMPÉTENCES</h2>
       </ReliefTitle>
 
-      <Toggle onLabel="FRONT-END" offLabel="BACK-END" />
+      <Toggle onLabel="BACK-END" offLabel="FRONT-END" onToggle={handleToggle} />
 
+
+      <ul
+        className={`flex flex-wrap gap-6 transition-opacity duration-300 ${
+          fade ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        {skills.map((skill) => {
+          const Icon = techIcon[skill];
+          return (
+            <li
+              key={skill}
+              className="flex flex-col items-center justify-center p-3 border-2 border-black rounded-lg bg-white shadow-md"
+              title={skill}
+            >
+              {Icon ? (
+                <Icon className="text-4xl" />
+              ) : (
+                <span className="text-sm font-semibold">{skill}</span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 };

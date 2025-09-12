@@ -1,0 +1,51 @@
+import Timeline from "./Timeline";
+
+const formations = [
+  {
+    title: "Développeur Python (en cours)",
+    org: "OpenClassrooms",
+    location: "Remote / France",
+    date: "2025 — 2026",
+    badge: "RNCP6",
+    description:
+      "Formation de spécialisation back-end et data avec Python, Django et Flask, axée sur l’automatisation, la POO et le déploiement cloud.",
+  },
+  {
+    title: "Développeur Web",
+    org: "OpenClassrooms",
+    location: "Remote / France",
+    date: "2025",
+    badge: "RNCP5",
+    description:
+      "Formation axée sur React, Node.js et MongoDB, avec mise en pratique sur des projets complets front-end et back-end.",
+  },
+  {
+    type: "divider",
+    comment: "🚀 Reconversion professionnelle",
+  },
+  {
+    title: "Dessinateur Projeteur",
+    org: "MECATHERM, SIDEL",
+    location: "Barembach, Reichstett / France",
+    date: "2012 — 2024",
+    badge: "CDI",
+    description:
+      "Conception de machines spéciales en bureau d'études.",
+  },
+
+  {
+    title: "Licence Pro GPI",
+    org: "IUT Haute-Alsace",
+    location: "Mulhouse / France",
+    date: "2011 — 2012",
+    badge: "Licence",
+    description:
+      "Par alternance, option CAO.",
+  },
+
+
+];
+
+export default function Formations() {
+  return <Timeline items={formations} title="MON PARCOURS" />;
+}

@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 
-export function Toggle({ onLabel = "ON", offLabel = "OFF", width = 250 }) {
+export function Toggle({ onLabel = "ON", offLabel = "OFF", width = 200, onToggle }) {
   const [enabled, setEnabled] = useState(false);
 
   const styleVars = {
-    "--toggle-w": typeof width === "number" ? `${width}px` : width, 
-    "--knob": "2rem", 
-   
+    "--toggle-w": typeof width === "number" ? `${width}px` : width,
+    "--knob": "2rem",
+  };
+
+  const handleClick = () => {
+    const newValue = !enabled;
+    setEnabled(newValue);
+    if (onToggle) onToggle(newValue);
   };
 
   return (
     <button
       type="button"
-      onClick={() => setEnabled(!enabled)}
+      onClick={handleClick}
       style={styleVars}
       className={`
         relative inline-flex h-11 w-[var(--toggle-w)] items-center justify-center
         rounded-full overflow-hidden transition-colors duration-300 ease-in-out
         text-white font-semibold border-2 border-black
-        ${enabled ? "bg-primary" : "bg-secondary"}
+        ${enabled ? "bg-secondary" : "bg-primary"}
         cursor-pointer select-none
       `}
     >
