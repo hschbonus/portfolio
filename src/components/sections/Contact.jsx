@@ -10,16 +10,6 @@ export const Contact = () => {
 
       <div className="flex gap-8">
         <a
-          href="mailto:h.schmidt@hotmail.fr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-3xl hover:scale-110 transition-transform"
-          aria-label="Envoyer un email"
-        >
-          <FaEnvelope />
-        </a>
-
-        <a
           href="https://www.linkedin.com/in/herveschmidt"
           target="_blank"
           rel="noopener noreferrer"
