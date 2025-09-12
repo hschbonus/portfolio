@@ -6,21 +6,15 @@ export const ReliefCard = ({
   width = 380,
   height = 400,
   className = "",
-  onClick, // <-- AJOUT ICI
+  onClick,
 }) => {
   const CardWrapper = href ? "a" : "div";
-
-  const wrapperStyle = {
-    width: typeof width === "number" ? `${width}px` : width,
-    height: typeof height === "number" ? `${height}px` : height,
-  };
 
   return (
     <CardWrapper
       {...(href ? { href } : {})}
-      onClick={onClick} // <-- AJOUT ICI
+      onClick={onClick}
       className={`relative inline-block cursor-pointer select-none ${className}`}
-      style={wrapperStyle}
     >
       {/* shadow */}
       <div

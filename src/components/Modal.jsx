@@ -8,7 +8,7 @@ export default function MyModal({ isOpen, onClose, title, children }) {
         isOpen={isOpen}
         onRequestClose={onClose}
         contentLabel={title}
-        className="relative z-[10000] bg-white p-6 rounded-xl border-2 shadow-lg w-[90vw] max-w-[1200px] h-[60vh] mx-auto transition-all duration-300 ease-out transform"
+        className="relative z-[10000] bg-white p-6 rounded-xl border-2 shadow-lg w-[90vw] max-w-[1200px] h-[70vh] mx-auto transition-all duration-300 ease-out transform"
         overlayClassName="fixed inset-0 z-[9999] bg-black/50 flex items-center justify-center transition-opacity duration-300 ease-out"
         closeTimeoutMS={300}
     >

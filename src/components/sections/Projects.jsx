@@ -60,16 +60,16 @@ export const Projects = () => {
             hoverImg={project.hoverImage}
             title={project.title}
             onClick={() => openProject(project)}
-            className="w-[360px] h-[400px]"
+            className="w-[300px] h-[350px] sm:w-[360px] sm:h-[400px]"
           />
         ))}
       </div>
 
      <Modal isOpen={open} onClose={closeProject} title={selectedProject?.title ?? "Détails du projet"}>
       {selectedProject && (
-        <div className="flex gap-6">
+        <div className="md:flex gap-6">
 
-          <div id="colonne1" className="w-3/5 flex items-center justify-center">
+          <div id="modal-carousel" className="md:w-3/5 flex items-center justify-center">
           {/* visuel */}
           {(() => {
             const imgs =
@@ -81,20 +81,19 @@ export const Projects = () => {
               <Carrousel
                 images={imgs}
                 alt={selectedProject.title}
-                className="w-full max-w-xl"
               />
             ) : null;
           })()}
           </div>
 
-          <div id="colonne2" className="w-2/5 flex flex-col gap-8">
+          <div id="modal-infos" className="md:w-2/5 flex flex-col gap-2 md:gap-8">
 
             {/* titre */}
-            <h3 className="text-3xl font-extrabold text-[var(--main-text-color)]">{selectedProject.title}</h3>
+            <h3 className="text-xl md:text-3xl font-extrabold text-[var(--main-text-color)]">{selectedProject.title}</h3>
 
             {/* description */}
             {selectedProject.description && (
-              <p className="text-[var(--main-text-color)]">{selectedProject.description}</p>
+              <p className="text-sm md:text-base text-[var(--main-text-color)]">{selectedProject.description}</p>
             )}
 
             {/* stack */}
@@ -108,7 +107,7 @@ export const Projects = () => {
 
                 {/* carte principale */}
                 <div className="relative z-10 rounded-lg border-2 border-black bg-white px-4 mr-6 py-3">
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-10 gap-y-4">
+                  <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-x-10 gap-y-4">
                     {selectedProject.stack.map((tech) => {
                       const Icon = techIcon[tech];
                       return (
@@ -132,7 +131,7 @@ export const Projects = () => {
             <ReliefButton 
               width='120'
               href={selectedProject.githubLink}
-              className="self-start"
+              className="md:mt-0 mt-2 self-start"
             >
               Voir le code <FaGithub className="ml-2 inline-block" />
             </ReliefButton>

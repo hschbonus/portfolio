@@ -14,19 +14,17 @@ export const Home = () => {
               startDelay={200}
               className="text-center"
             />
-            <div className="gap-4 flex flex-col justify-end items-start pb-2">
-              <p className="mt-4 mb-6 text-xl text-[var(--main-text-color)] text-left text-lg">
-                Développeur web, je crée des sites modernes et performants pour valoriser votre activité en ligne.
-              </p>
+            <p className="mt-4 mb-6 text-lg md:text-xl text-[var(--main-text-color)] text-left">
+              Développeur web, je crée des sites modernes et performants pour valoriser votre activité en ligne.
+            </p>
 
-              <div className="flex gap-8">
-                <ReliefButton href="#projects" width={180} height={48}>
-                  Mes projets
-                </ReliefButton>
-                <ReliefButton href="#contact" width={180} height={48}>
-                  Me contacter
-                </ReliefButton>
-              </div>
+            <div className="flex flex-wrap gap-8">
+              <ReliefButton href="#projects" width={180} height={48}>
+                Mes projets
+              </ReliefButton>
+              <ReliefButton href="#contact" width={180} height={48}>
+                Me contacter
+              </ReliefButton>
             </div>
           </div>
         </div>

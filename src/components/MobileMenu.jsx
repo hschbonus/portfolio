@@ -32,7 +32,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                     }        
             `}
       >
-        Home
+        Accueil
       </a>
       <a
         href="#about"
@@ -43,7 +43,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             }        
     `}
       >
-        About
+        A propos
       </a>
       <a
         href="#projects"
@@ -54,7 +54,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             }        
     `}
       >
-        Projects
+        Projets
       </a>
       <a
         href="#contact"

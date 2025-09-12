@@ -4,7 +4,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-10 flex flex-col items-center bg-white border-t-2 border-b-2 border-black shadow-md"
+      className="py-10 flex flex-col items-center bg-white border-t-2 border-b-2 border-black w-full"
     >
       <h2 className="text-xl font-bold mb-6">CONTACT</h2>
 
