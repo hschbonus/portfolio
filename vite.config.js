@@ -4,9 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
-  base: mode === 'production' ? '/portfolio/' : '/', // ✅
+  base: mode === 'production' ? '/portfolio/' : '/',
   server: {
-    open: '/', // en dev, ouvre la racine
+    open: '/',
     port: 5173,
   },
 }))

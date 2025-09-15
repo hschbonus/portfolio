@@ -54,7 +54,7 @@ return (
       <ReliefButtonSm
           type="button"
           onClick={() => go(-1)}
-          className="pointer-events-auto absolute left-2 !hidden md:flex"
+          className="pointer-events-auto absolute left-2 !hidden md:!flex"
           aria-label="Précédent"
         >
           ‹
@@ -75,7 +75,7 @@ return (
       <ReliefButtonSm
         type="button"
         onClick={() => go(+1)}
-        className="pointer-events-auto absolute right-3 z-10 !hidden md:flex"
+        className="pointer-events-auto absolute right-3 z-10 !hidden md:!flex"
         aria-label="Suivant"
       >
         ›

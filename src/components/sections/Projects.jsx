@@ -136,7 +136,7 @@ export const Projects = () => {
             <ReliefButton 
               width='120'
               href={selectedProject.githubLink}
-              className="md:mt-0 mt-2 self-start !hidden"
+              className="md:mt-0 mt-2 self-start !hidden md:!inline-flex"
             >
               Voir le code <FaGithub className="ml-2 inline-block" />
             </ReliefButton>
